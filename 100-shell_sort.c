@@ -8,7 +8,7 @@
  */
 void shell_sort(int *array, size_t size)
 {
-unsigned int i = 0, j = 0, gap = 0;
+unsigned int i = 0, j = 0, gap = 1;
 int aux = 0;
 
 /* Check if the array is NULL or has less than two elements */
@@ -16,7 +16,7 @@ if (array == NULL || size < 2)
 return;
 
 /* Calculate the initial gap value for the Shell sort */
-while (gap < size / 3)
+while (gap <= size / 3)
 gap = gap * 3 + 1;
 
 /* Iterate through the gaps in the sequence */

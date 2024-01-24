@@ -30,7 +30,7 @@ counter[j] = 0;
 for (i = 0; i < size; i++)
 counter[array[i]] += 1;
 /*Calculate the cumulative sum in the counter array*/
-for (j = 0; j < k; j++)
+for (j = 0; j <= k; j++)
 {
 counter[j + 1] += counter[j];
 printf("%d, ", counter[j]);
@@ -51,4 +51,3 @@ array[j] = k;
 /*Free the allocated memory for the counter array*/
 free(counter);
 }
-
